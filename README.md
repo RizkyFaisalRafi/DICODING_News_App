@@ -1,6 +1,13 @@
 # news_app
 
-A new Flutter project.
+Setelah mempelajari tentang widget dan navigasi, sekarang kita akan memulai praktik mengembangkan aplikasi pertama 
+kita di kelas ini. Aplikasi yang akan kita buat adalah sebuah aplikasi portal berita. 
+Aplikasi ini akan menampilkan beberapa berita dari berbagai sumber. 
+Beberapa poin yang akan dipelajari pada materi ini, antara lain:
+
+- Mengambil data dari berkas JSON lalu ditampilkan sebagai list.
+- Mengimplementasikan named routes untuk navigasi halaman.
+- Menambahkan packagewebview untuk menampilkan konten web.
 
 ## Getting Started
 
