@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/detail_page.dart';
+import 'package:news_app/styles.dart';
 import 'article.dart';
-
+import 'list_page.dart';
 
 
 void main() {
@@ -16,6 +17,26 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        colorScheme: Theme.of(context).colorScheme.copyWith(
+          primary: primaryColor,
+          onPrimary: Colors.black,
+          secondary: secondaryColor,
+        ),
+        textTheme: myTextTheme,
+        appBarTheme: AppBarTheme(elevation: 0), // elevation menghhilangkan efek shadow appBar
+
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            primary: secondaryColor,
+            onPrimary: Colors.white,
+            textStyle: TextStyle(),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(0),
+              ),
+            ),
+          ),
+        ),
       ),
 
       initialRoute: NewsListPage.routeName,
@@ -32,47 +53,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Untuk menampilkan daftar artikel ke bagian body, kita akan menggunakan widget ListView
-class NewsListPage extends StatelessWidget {
-  static const routeName = '/article_list';
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('News App'),
-      ),
-      body: FutureBuilder<String>(
-        future:
-        DefaultAssetBundle.of(context).loadString('assets/articles.json'),
-        builder: (context, snapshot) {
-          final List<Article> articles = parseArticles(snapshot.data);
-          return ListView.builder(
-            itemCount: articles.length,
-            itemBuilder: (context, index) {
-              return _buildArticleItem(context, articles[index]);
-            },
-          );
-        },
-      ),
-    );
-  }
-
-  // Method ini akan menampilkan widget dari masing-masing artikel.
-  Widget _buildArticleItem(BuildContext context, Article article) {
-    return ListTile(
-      contentPadding:
-      const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-      leading: Image.network(
-        article.urlToImage,
-        width: 100,
-      ),
-      title: Text(article.title),
-      subtitle: Text(article.author),
-      onTap: () {
-        Navigator.pushNamed(context, ArticleDetailPage.routeName,
-            arguments: article);
-      },
-    );
-  }
-}

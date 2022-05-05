@@ -9,6 +9,23 @@ Beberapa poin yang akan dipelajari pada materi ini, antara lain:
 - Mengimplementasikan named routes untuk navigasi halaman.
 - Menambahkan packagewebview untuk menampilkan konten web.
 
+Modul Latihan, Menambahkan Tema:
+- Membuat berkas untuk menyimpan konfigurasi tema
+- Mengubah tema aplikasi berdasarkan studi kasus Fortnightly
+
+
+Di dalam pengembangan aplikasi refactoring adalah satu hal yang penting. 
+Refactoring adalah proses mengubah sistem dari perangkat lunak tanpa mengubah fungsionalitas 
+dari perangkat lunak tersebut. Sederhananya, tujuan dari refactoring adalah untuk meningkatkan 
+kualitas kode dengan memperbaiki rancangan atau struktur kode supaya lebih baik 
+dan lebih mudah ke depannya.
+
+Hal pertama yang akan kita refactor dari project News App adalah memisahkan kode 
+berdasarkan berkas yang relevan. Pada Dart atau Flutter kita bisa menuliskan seluruh kode aplikasi 
+di dalam satu berkas. Namun, semakin banyak baris kode yang ditulis tentunya 
+semakin sulit untuk dibaca dan dikelola bukan? Oleh karena itu, kita akan memisahkan 
+kode berdasarkan fungsionalitasnya.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

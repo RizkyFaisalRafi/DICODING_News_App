@@ -1,5 +1,6 @@
 import 'package:news_app/article.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/widgets/custom_scaffold.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class ArticleDetailPage extends StatelessWidget {
@@ -61,7 +62,7 @@ class ArticleDetailPage extends StatelessWidget {
   }
 }
 
-class ArticleWebView extends StatelessWidget {
+class ArticleWebView extends StatelessWidget { // Web View
   static const routeName = '/article_web';
 
   final String url;
@@ -70,10 +71,10 @@ class ArticleWebView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('News App'),
-      ),
+    return CustomScaffold(
+      // appBar: AppBar(
+      //   title: Text('News App'),
+      // ),
 /*
 * Widget ini berfungsi untuk menampilkan halaman web Anda ke tampilan mobile.
 * Secara default fitur JavaScript pada web Anda akan dinonaktifkan.
