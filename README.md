@@ -26,6 +26,25 @@ di dalam satu berkas. Namun, semakin banyak baris kode yang ditulis tentunya
 semakin sulit untuk dibaca dan dikelola bukan? Oleh karena itu, kita akan memisahkan 
 kode berdasarkan fungsionalitasnya.
 
+
+Secara garis besar animasi pada Flutter terbagi menjadi dua kategori, yaitu implicit animations 
+dan explicit animations. Implicit animations adalah animasi yang pergerakannya diatur 
+secara implisit oleh library animation dari Flutter. Anda cukup menentukan 
+nilai awal dan nilai akhir dari property widget yang ingin dianimasikan. 
+Implicit animation sendirilah yang akan mengatur efek animasi dari widget tersebut. 
+Sementara pada explicit widget kita sebagai developer yang mengatur bagaimana animasi akan berjalan. 
+Kita memanfaatkan objek AnimationController untuk mengatur animasi yang kita inginkan.
+
+
+Hero Animation adalah widget animasi pada Flutter yang sangat menarik karena membantu 
+kita menerapkan animasi yang bagus dengan mudah. Animasi ini memberikan efek terbang dari 
+satu halaman ke halaman lain. Memungkinkan fokus pengguna tetap terjaga ketika 
+melakukan navigasi antar halaman.
+
+Cara penggunaannya pun cukup mudah. Bungkus widget yang ingin dianimasikan dengan widget Hero,
+kemudian tambahkan parameter tag sebagai identifier. Parameter tag ini harus unik untuk setiap
+widget yang ingin dianimasikan.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
